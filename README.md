@@ -1,2 +1,3 @@
-# Analise_Comparativa_Algoritmos_de_Ordenacao
-Um projeto voltado à análise comparativa de seis algoritmos de ordenação, considerando desempenho, complexidade, número de trocas, uso de espaço auxiliar, comparações, chamadas recursivas e tempo de execução em diferentes cenários (melhor, médio e pior caso).
+# Análise Comparativa de Algoritmos de Ordenação
+Um projeto desenvolvido com o objetivo de analisar e comparar o desempenho, a efetividade e outras características de seis algoritmos de ordenação: Selection Sort, Insertion Sort, Bubble Sort, Quick Sort, Merge Sort e Intro Sort (std::sort). A análise se baseia em gráficos comparativos que consideram a complexidade, o número de trocas e o uso de espaço auxiliar em função da quantidade de elementos, de acordo com o caso analisado (melhor, médio ou pior). Também são levados em conta o número de comparações, trocas, chamadas recursivas e os tempos de execução de cada algoritmo.
+
