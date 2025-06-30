@@ -34,11 +34,11 @@ Função que receber as principais entradas que servirão como parâmetros para 
 
 | Tipos de Vetores  | Código     | Descrição                        |
 |:------------------|:------:|----------------------------------|
-| Aleatorio         |   1    | Elementos em ordem aleatória.    |
+| Aleatório         |   1    | Elementos em ordem aleatória.    |
 | Ordenado          |   2    | Elementos em ordem crescente.    |
 | Inversamente Ordenado | 3  | Elementos em ordem decrescente.  |
 | Quase Ordenado    |   4    | Elementos em ordem quase crescente. |
-| Bitonica          |   5    | Elementos em ordem parte crescente e depois segue decrescente. |
+| Bitônica          |   5    | Elementos em ordem parte crescente e depois segue decrescente. |
 
 No final, é solicitado mais um número inteiro que indica se o vetor deve conter valores que se repetem sim (1) ou não (0). Com todos os parâmetros definidos, o vetor é gerado de acordo com as especificações fornecidas e, ao final da função, é retornado.
 
@@ -82,7 +82,7 @@ Função responsável por realizar a partição do `vetor` dentro de `quicksort(
 - `direita`: Índice do elemento mais à direita do intervalo que deseja ser ordenado. Começa sendo o item do último elemento do `vetor` (tamanho do vetor - 1), mas conforme as partições vão ocorrendo, ele vai alterando de valor.
 
 ### + void quicksort(vector\<int>& vetor, int esquerda, int direita)
-Função que segue a implementação do algoritmo de ordenação Quick Sort, aplicando-o sobre o `vetor`. O Quick Sort é um algoritmo eficiente baseado na estratégia de dividir e conquistar. Escolhe um elemento pivô e particiona o vetor em dois subvetores menores, ordenando-os recursivamente.
+Função que segue a implementação do algoritmo de ordenação Quick Sort, aplicando-o sobre o `vetor`. O Quick Sort começa escolhendo um elemento pivô e particiona o vetor em dois subvetores menores, ordenando-os recursivamente.
 - `vetor`: Vetor de inteiros que deseja ser ordenado em ordem crescente.
 - `esquerda`: Índice do elemento mais à esquerda do intervalo que deseja ser ordenado. Começa sendo o item do primeiro elemento do `vetor` (0), mas conforme as partições vão ocorrendo, ele vai alterando de valor.
 - `direita`: Índice do elemento mais à direita do intervalo que deseja ser ordenado. Começa sendo o item do último elemento do `vetor` (tamanho do vetor - 1), mas conforme as partições vão ocorrendo, ele vai alterando de valor.
@@ -95,7 +95,7 @@ Função que realiza a junção dos subconjuntos do `vetor` na função `mergeso
 - `direita`: Índice do elemento mais à direita do intervalo que deseja ser ordenado. Começa sendo o item do último elemento do `vetor` (tamanho do vetor - 1), mas conforme as partições vão ocorrendo, ele vai alterando de valor.
 
 ### + void mergesort(vector\<int>& vetor, int esquerda, int direita)
-Função que segue a implementação do algoritmo de ordenação Selection Sort, aplicando-o sobre o `vetor`. O Merge Sort, tal como o Quick Sort, utiliza a técnica de dividir e conquistar, dividindo o vetor em partes menores, ordenando-as e depois mesclando as partes ordenadas.
+Função que segue a implementação do algoritmo de ordenação Selection Sort, aplicando-o sobre o `vetor`. O Merge Sort fica dividindo o vetor em partes menores, ordenando-as e depois mesclando as partes ordenadas.
 - `vetor`: Vetor de inteiros que deseja ser ordenado em ordem crescente.
 - `esquerda`: Índice do elemento mais à esquerda do intervalo que deseja ser ordenado. Começa sendo o item do primeiro elemento do `vetor` (0), mas conforme as partições vão ocorrendo, ele vai alterando de valor.
 - `direita`: Índice do elemento mais à direita do intervalo que deseja ser ordenado. Começa sendo o item do último elemento do `vetor` (tamanho do vetor - 1), mas conforme as partições vão ocorrendo, ele vai alterando de valor.
