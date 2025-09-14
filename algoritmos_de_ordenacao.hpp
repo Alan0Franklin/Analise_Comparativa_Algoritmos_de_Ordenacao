@@ -1,4 +1,4 @@
-#ifndef ALGORITMOSDEORDENACAO
+#ifndef ALGORITMOSDEORDENACAO_HPP
 #define ALGORITMOSDEORDENACAO_HPP
 
 #include <string>
@@ -41,5 +41,6 @@ void merge(vector<int>& vetor, int esquerda, int meio, int direita);
 
 // Algoritmo de ordenação Merge Sort.
 void mergesort(vector<int>& vetor, int esquerda, int direita);
+
 
 #endif
