@@ -27,10 +27,10 @@ Analise_Comparativa_Algoritmos_de_Ordenacao/
 Função para ler um número inteiro do terminal, bloqueando qualquer entrada que não seja um inteiro. Após validar que a entrada é um número inteiro, verifica-se se o valor pertence ao intervalo fechado \[`lim_inf`, `lim_sup`]. Se pertencer, a função retorna esse valor e é finalizada. Caso contrário, a `mensagem_erro` será exibida e um novo valor deverá ser inserido até que seja uma entrada válida.
 - `mensagem_erro`: String correspondente à mensagem de erro que deve ser exposta caso um valor não inteiro seja recebido do dispositivo de entrada.
 - `lim_inf`: Inteiro correspondente ao primeiro número de um intervalo fechado o qual o valor que deve pertencer.
-- `lim_inf`: Inteiro correspondente ao último número de um intervalo fechado o qual o valor que deve pertencer. Se esse valor for igual à -1, o intervalo para conferência do valor principal será \[`lim_inf`, +∞].
+- `lim_sup`: Inteiro correspondente ao último número de um intervalo fechado o qual o valor que deve pertencer. Se esse valor for igual à -1, o intervalo para conferência do valor principal será \[`lim_inf`, +∞].
 
 ### + vector\<int> criador_vetor()
-Função que receber as principais entradas que servirão como parâmetros para a criação do vetor de inteiros, o qual será utilizado nos testes dos algoritmos de ordenação. Primeiro é solicitado um número inteiro que define o tamanho desejado do vetor. Em seguida, pede-se ao usuário que informe o tipo de vetor a ser gerado, também por meio de um número inteiro digitado no terminal, cujos valores possíveis são definidos conforme a seguinte tabela:
+Função que recebe as principais entradas que servirão como parâmetros para a criação do vetor de inteiros, o qual será utilizado nos testes dos algoritmos de ordenação. Primeiro é solicitado um número inteiro que define o tamanho desejado do vetor. Em seguida, pede-se ao usuário que informe o tipo de vetor a ser gerado, também por meio de um número inteiro digitado no terminal, cujos valores possíveis são definidos conforme a seguinte tabela:
 
 | Tipos de Vetores  | Código     | Descrição                        |
 |:------------------|:------:|----------------------------------|
@@ -45,13 +45,13 @@ No final, é solicitado mais um número inteiro que indica se o vetor deve conte
 ### + void imprimir_vetor(vector\<int> &vetor, int tamanho_vetor, bool se_resultado)
 Função para imprimir o `vetor` recebido no terminal.
 - `vetor`: Vetor de inteiros que deseja ser impresso no terminal.
-- `tamanho_vetor`: Inteiro correspondente ao tamanho do vetor.
+- `tamanho_vetor`: Inteiro correspondente ao tamanho do `vetor`.
 - `se_resultado`: Booleano que indica se o vetor é o equivalente ao gerado no início do programa ou se ele já foi ordenado por um algoritmo de ordenação.
 
 ### + void comparar_sorts(vector\<int> &vetor, int tamanho_vetor)
 Função que aplica os seis algoritmos de ordenação sobre o `vetor` fornecido, registrando o número de comparações, trocas e chamadas recursivas realizadas, além da medição do tempo de execução, durante a ordenação. Enfim, exibindo todas essas métricas no terminal.
 - `vetor`: Vetor de inteiros que deseja ser realizado as comparações.
-- `tamanho_vetor`: Inteiro correspondente ao tamanho do vetor.
+- `tamanho_vetor`: Inteiro correspondente ao tamanho do `vetor`.
 
 ### + void trocar_de_posicao(vector\<int> &vetor, int id1, int id2)
 Função que troca a posição dos elementos do `vetor` nos índices `id1` e `id2`.
@@ -62,43 +62,43 @@ Função que troca a posição dos elementos do `vetor` nos índices `id1` e `id
 ### + void selectionsort(vector\<int> &vetor, int tamanho_vetor)
 Função que segue a implementação do algoritmo de ordenação Selection Sort, aplicando-o sobre o `vetor`. O Selection Sort é um algoritmo simples que percorre o vetor procurando o menor elemento e o coloca na primeira posição, depois repete o processo para as próximas posições.
 - `vetor`: Vetor de inteiros que deseja ser ordenado em ordem crescente.
-- `tamanho_vetor`: Inteiro correspondente ao tamanho do vetor.
+- `tamanho_vetor`: Inteiro correspondente ao tamanho do `vetor`.
 
 ### + void insertionsort(vector\<int> &vetor, int tamanho_vetor)
 Função que segue a implementação do algoritmo de ordenação Insertion Sort, aplicando-o sobre o `vetor`. O Insertion Sort constrói o vetor ordenado gradualmente, inserindo cada elemento na posição correta em relação aos anteriores.
 - `vetor`: Vetor de inteiros que deseja ser ordenado em ordem crescente.
-- `tamanho_vetor`: Inteiro correspondente ao tamanho do vetor.
+- `tamanho_vetor`: Inteiro correspondente ao tamanho do `vetor`.
 
 ### + void bubblesort(vector\<int> &vetor, int tamanho_vetor)
 Função que segue a implementação do algoritmo de ordenação Bubble Sort, aplicando-o sobre o `vetor`. O Bubble Sort compara elementos adjacentes e os troca se estiverem fora de ordem, "borbulhando" os maiores para o final do vetor a cada passagem.
 - `vetor`: Vetor de inteiros que deseja ser ordenado em ordem crescente.
-- `tamanho_vetor`: Inteiro correspondente ao tamanho do vetor.
+- `tamanho_vetor`: Inteiro correspondente ao tamanho do `vetor`.
 
 ### + int partition(vector\<int> &vetor, int esquerda, int direita)
 Função responsável por realizar a partição do `vetor` dentro de `quicksort()`, reorganizando os elementos durante o processo. Ao final, retorna o índice do pivô que será utilizado para dividir o vetor em dois subconjuntos a serem ordenados separadamente em etapas posteriores.
 
 - `vetor`: Vetor de inteiros que deseja ser ordenado em ordem crescente.
 - `esquerda`: Índice do elemento mais à esquerda do intervalo que deseja ser ordenado. Começa sendo o item do primeiro elemento do `vetor` (0), mas conforme as partições vão ocorrendo, ele vai alterando de valor.
-- `direita`: Índice do elemento mais à direita do intervalo que deseja ser ordenado. Começa sendo o item do último elemento do `vetor` (tamanho do vetor - 1), mas conforme as partições vão ocorrendo, ele vai alterando de valor.
+- `direita`: Índice do elemento mais à direita do intervalo que deseja ser ordenado. Começa sendo o item do último elemento do `vetor` (tamanho do `vetor` - 1), mas conforme as partições vão ocorrendo, ele vai alterando de valor.
 
 ### + void quicksort(vector\<int>& vetor, int esquerda, int direita)
 Função que segue a implementação do algoritmo de ordenação Quick Sort, aplicando-o sobre o `vetor`. O Quick Sort começa escolhendo um elemento pivô e particiona o vetor em dois subvetores menores, ordenando-os recursivamente.
 - `vetor`: Vetor de inteiros que deseja ser ordenado em ordem crescente.
 - `esquerda`: Índice do elemento mais à esquerda do intervalo que deseja ser ordenado. Começa sendo o item do primeiro elemento do `vetor` (0), mas conforme as partições vão ocorrendo, ele vai alterando de valor.
-- `direita`: Índice do elemento mais à direita do intervalo que deseja ser ordenado. Começa sendo o item do último elemento do `vetor` (tamanho do vetor - 1), mas conforme as partições vão ocorrendo, ele vai alterando de valor.
+- `direita`: Índice do elemento mais à direita do intervalo que deseja ser ordenado. Começa sendo o item do último elemento do `vetor` (tamanho do `vetor` - 1), mas conforme as partições vão ocorrendo, ele vai alterando de valor.
 
 ### + void merge(vector\<int>& vetor, int esquerda, int meio, int direita)
 Função que realiza a junção dos subconjuntos do `vetor` na função `mergesort()`, ordenando-os no processo.
 - `vetor`: Vetor de inteiros que deseja ser ordenado em ordem crescente.
 - `esquerda`: Índice do elemento mais à esquerda do intervalo que deseja ser ordenado. Começa sendo o item do primeiro elemento do `vetor` (0), mas conforme as partições vão ocorrendo, ele vai alterando de valor.
 - `meio`: Índice do elemento que separa dois subconjuntos do `vetor` no meio, a fim de mesclá-los depois.
-- `direita`: Índice do elemento mais à direita do intervalo que deseja ser ordenado. Começa sendo o item do último elemento do `vetor` (tamanho do vetor - 1), mas conforme as partições vão ocorrendo, ele vai alterando de valor.
+- `direita`: Índice do elemento mais à direita do intervalo que deseja ser ordenado. Começa sendo o item do último elemento do `vetor` (tamanho do `vetor` - 1), mas conforme as partições vão ocorrendo, ele vai alterando de valor.
 
 ### + void mergesort(vector\<int>& vetor, int esquerda, int direita)
 Função que segue a implementação do algoritmo de ordenação Selection Sort, aplicando-o sobre o `vetor`. O Merge Sort fica dividindo o vetor em partes menores, ordenando-as e depois mesclando as partes ordenadas.
 - `vetor`: Vetor de inteiros que deseja ser ordenado em ordem crescente.
 - `esquerda`: Índice do elemento mais à esquerda do intervalo que deseja ser ordenado. Começa sendo o item do primeiro elemento do `vetor` (0), mas conforme as partições vão ocorrendo, ele vai alterando de valor.
-- `direita`: Índice do elemento mais à direita do intervalo que deseja ser ordenado. Começa sendo o item do último elemento do `vetor` (tamanho do vetor - 1), mas conforme as partições vão ocorrendo, ele vai alterando de valor.
+- `direita`: Índice do elemento mais à direita do intervalo que deseja ser ordenado. Começa sendo o item do último elemento do `vetor` (tamanho do `vetor` - 1), mas conforme as partições vão ocorrendo, ele vai alterando de valor.
 
 ## Como Compilar e Executar <a name="3-como_compilar_e_executar"></a>
 
